@@ -1,8 +1,9 @@
-# kit - installs the command that runs, in each repository, the kit release that repository pins; see docs/install.md
-# in https://github.com/empowerite/kit.
+# kit-rc - the newest release candidate of kit, for those who want it before it is stable. kit.rb is the stable one,
+# which the first stable release adds. Both install bin/kit, so only one of them is installed at a time.
 #
-# A release workflow of empowerite/kit rewrites url and sha256 for each release; do not edit them by hand.
-class Kit < Formula
+# A release workflow of empowerite/kit rewrites url and sha256 for each release candidate; do not edit them by hand.
+# see: https://github.com/empowerite/kit, docs/install.md
+class KitRc < Formula
   desc "Rules for AI coding agents, and checks that they followed them"
   homepage "https://github.com/empowerite/kit"
   url "https://github.com/empowerite/kit/releases/download/release/0.1.0-rc.7/kit-0.1.0-rc.7.tar.gz"
@@ -13,6 +14,8 @@ class Kit < Formula
   depends_on "bash"
   depends_on "jq"
   depends_on "yq"
+
+  conflicts_with "kit", because: "both install kit"
 
   def install
     libexec.install Dir["*"]
