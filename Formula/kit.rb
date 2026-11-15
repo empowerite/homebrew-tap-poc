@@ -1,9 +1,9 @@
-# kit - installs the kit's loader, which runs in each repository the release that repository pins; see docs/install.md
+# kit - installs the command that runs, in each repository, the kit release that repository pins; see docs/install.md
 # in https://github.com/empowerite/kit.
 #
 # A release workflow of empowerite/kit rewrites url and sha256 for each release; do not edit them by hand.
 class Kit < Formula
-  desc "Loader for kit, which runs in each repository the release that repository pins"
+  desc "Rules for AI coding agents, and checks that they followed them"
   homepage "https://github.com/empowerite/kit"
   url "https://github.com/empowerite/kit/releases/download/release/0.1.0-rc.7/kit-0.1.0-rc.7.tar.gz"
   sha256 "e64ec6d2a3185b65b448bd0fbd19aac69170e2ad67dc4010f4d5714da0cc7e79"
